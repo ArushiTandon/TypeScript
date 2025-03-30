@@ -2,7 +2,7 @@ const inputElement1 = document.getElementById("input1") as HTMLInputElement;
 const inputElement2 = document.getElementById("input2") as HTMLInputElement;
 const buttonElemet = document.querySelector("submit")!;
 
-const numResults: number[] = []; 
+const numResults: Array<number> = []; 
 const stringResults: string[] = [];
 
 type Combinable = number | string; // type alias for number or string
@@ -40,3 +40,13 @@ buttonElemet.addEventListener('click', () => {
   printResult({ val: result as number, timestamp: new Date() });
   console.log(numResults, stringResult);
   });
+
+  const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('It Worked');
+    }, 1000); 
+  });
+
+  myPromise.then((result) => {
+    console.log(result);
+  })

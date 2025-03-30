@@ -1,12 +1,12 @@
-var inputElemnent = document.getElementById("input1");
-var inputElemnent2 = document.getElementById("input2");
-var button = document.querySelector("submit");
-function add(a, b) {
+var inputElement1 = document.getElementById("input1");
+var inputElement2 = document.getElementById("input2");
+var buttonElemet = document.querySelector("submit");
+function addnum(a, b) {
     return a + b;
 }
-button.addEventListener('click', function () {
-    var a = inputElemnent.value;
-    var b = inputElemnent2.value;
-    var result = add(+a, +b);
+buttonElemet.addEventListener('click', function () {
+    var a = inputElement1.value;
+    var b = inputElement2.value;
+    var result = addnum(+a, +b);
     console.log(result);
 });
